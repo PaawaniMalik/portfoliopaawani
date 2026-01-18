@@ -1,8 +1,10 @@
 import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
-import CharacterCard from "./CharacterCard";
 import Starburst from "./Starburst";
 import paawaniAvatar from "@/assets/paawani-avatar.png";
+import paawaniAvatar2 from "@/assets/paawani-avatar-2.png";
+import paawaniAvatar3 from "@/assets/paawani-avatar-3.png";
+import paawaniAvatar4 from "@/assets/paawani-avatar-4.png";
 
 interface HeroSectionProps {
   activeSection: string;
@@ -10,11 +12,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
-  const characters = [
-    { emoji: "👩🏻‍💻", label: "Coder", delay: "animation-delay-100" },
-    { emoji: "🧋", label: "Coffee lover", delay: "animation-delay-200" },
-    { emoji: "🎨", label: "Designer", delay: "animation-delay-300" },
-    { emoji: "✨", label: "Creative", delay: "animation-delay-400" },
+  const avatars = [
+    { src: paawaniAvatar, alt: "Paawani main", delay: "" },
+    { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed" },
+    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2" },
+    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating" },
   ];
 
   return (
@@ -49,23 +51,14 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
           <PixelTitle text="PAAWANI" />
         </div>
 
-        {/* Avatar Illustration */}
-        <div className="mb-8 md:mb-12">
-          <img 
-            src={paawaniAvatar} 
-            alt="Paawani illustration" 
-            className="w-40 h-40 md:w-52 md:h-52 object-contain mx-auto floating"
-          />
-        </div>
-
-        {/* Character Cards */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
-          {characters.map((char, index) => (
-            <CharacterCard
+        {/* Avatar Illustrations */}
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-14">
+          {avatars.map((avatar, index) => (
+            <img 
               key={index}
-              emoji={char.emoji}
-              label={char.label}
-              delay={char.delay}
+              src={avatar.src} 
+              alt={avatar.alt} 
+              className={`w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 object-contain ${avatar.delay || 'floating'}`}
             />
           ))}
         </div>
