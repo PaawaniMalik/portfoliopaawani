@@ -2,6 +2,7 @@ import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
 import CharacterCard from "./CharacterCard";
 import Starburst from "./Starburst";
+import paawaniAvatar from "@/assets/paawani-avatar.png";
 
 interface HeroSectionProps {
   activeSection: string;
@@ -44,8 +45,17 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
       {/* Main Content */}
       <div className="flex flex-col items-center justify-center px-4 pt-8 pb-16 relative z-10">
         {/* Title */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-6 md:mb-8">
           <PixelTitle text="PAAWANI" />
+        </div>
+
+        {/* Avatar Illustration */}
+        <div className="mb-8 md:mb-12">
+          <img 
+            src={paawaniAvatar} 
+            alt="Paawani illustration" 
+            className="w-40 h-40 md:w-52 md:h-52 object-contain mx-auto"
+          />
         </div>
 
         {/* Character Cards */}
