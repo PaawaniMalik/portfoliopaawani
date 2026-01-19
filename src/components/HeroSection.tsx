@@ -15,12 +15,12 @@ interface HeroSectionProps {
 
 const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
   const avatars = [
-    { src: paawaniAvatar, alt: "Paawani main", delay: "" },
-    { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed" },
-    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2" },
-    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating" },
-    { src: paawaniAvatar5, alt: "Paawani with dog", delay: "floating-delayed" },
-    { src: paawaniAvatar6, alt: "Paawani smiling", delay: "floating-delayed-2" },
+    { src: paawaniAvatar, alt: "Paawani main", delay: "", blink: "animate-blink" },
+    { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed", blink: "animate-blink-delayed" },
+    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2", blink: "animate-blink-delayed-2" },
+    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating", blink: "animate-blink" },
+    { src: paawaniAvatar5, alt: "Paawani with dog", delay: "floating-delayed", blink: "animate-blink-delayed" },
+    { src: paawaniAvatar6, alt: "Paawani smiling", delay: "floating-delayed-2", blink: "animate-blink-delayed-2" },
   ];
 
   return (
@@ -62,7 +62,7 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
               key={index}
               src={avatar.src} 
               alt={avatar.alt} 
-              className={`w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 object-contain ${avatar.delay || 'floating'}`}
+              className={`w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 object-contain ${avatar.delay || 'floating'} ${avatar.blink}`}
             />
           ))}
         </div>
