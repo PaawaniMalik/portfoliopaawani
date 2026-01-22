@@ -42,6 +42,26 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
         className="top-1/4 right-[25%] floating" 
         size="sm" 
       />
+      <Starburst 
+        className="top-[15%] left-[30%] floating-delayed" 
+        size="sm" 
+      />
+      <Starburst 
+        className="top-[20%] right-[15%] floating-delayed-2" 
+        size="md" 
+      />
+      <Starburst 
+        className="bottom-[35%] right-[30%] floating" 
+        size="sm" 
+      />
+      <Starburst 
+        className="top-[60%] left-[5%] floating-delayed" 
+        size="md" 
+      />
+      <Starburst 
+        className="bottom-[20%] right-[12%] floating-delayed-2" 
+        size="sm" 
+      />
 
       {/* Navigation */}
       <div className="flex justify-center pt-8 px-4 relative z-20">

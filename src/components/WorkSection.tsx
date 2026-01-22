@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import PixelTitle from "./PixelTitle";
+import Starburst from "./Starburst";
 
 interface DraggableItem {
   id: number;
@@ -190,17 +192,42 @@ const WorkSection = () => {
   return (
     <section 
       id="work" 
-      className="min-h-screen bg-card py-20 px-4 md:px-8 overflow-hidden"
+      className="min-h-screen grid-bg py-20 px-4 md:px-8 overflow-hidden relative"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Starbursts */}
+      <Starburst className="top-[10%] left-[8%] floating" size="md" />
+      <Starburst className="top-[20%] right-[10%] floating-delayed" size="sm" />
+      <Starburst className="bottom-[15%] left-[15%] floating-delayed-2" size="sm" />
+      <Starburst className="bottom-[25%] right-[8%] floating" size="md" />
+      <Starburst className="top-[50%] left-[5%] floating-delayed" size="sm" />
+      
+      {/* Title */}
+      <div className="flex flex-col items-center mb-8 relative z-10">
+        <PixelTitle text="PAAWANI" />
+        <h2 className="pixel-text text-2xl md:text-4xl mt-4 text-primary">SKILLS</h2>
+      </div>
+
+      {/* Left Sticky Notes */}
+      <div className="absolute left-4 md:left-8 top-1/3 z-20 flex flex-col gap-6">
+        <div className="w-32 h-32 md:w-40 md:h-40 bg-pink-300 shadow-lg rotate-[-5deg] p-4 flex flex-col justify-center items-center border-b-4 border-pink-400 animate-wiggle">
+          <span className="text-pink-700 font-bold text-sm md:text-base text-center">💡 Creative</span>
+          <span className="text-pink-600 text-xs md:text-sm text-center mt-2">Problem Solver</span>
+        </div>
+        <div className="w-32 h-32 md:w-40 md:h-40 bg-pink-200 shadow-lg rotate-[3deg] p-4 flex flex-col justify-center items-center border-b-4 border-pink-300 animate-wiggle" style={{ animationDelay: '0.5s' }}>
+          <span className="text-pink-700 font-bold text-sm md:text-base text-center">🎨 UI/UX</span>
+          <span className="text-pink-600 text-xs md:text-sm text-center mt-2">Designer</span>
+        </div>
+      </div>
+
       <div 
         ref={containerRef}
         className="max-w-6xl mx-auto relative flex justify-center items-center" 
-        style={{ minHeight: "800px" }}
+        style={{ minHeight: "700px" }}
       >
         
         {/* Center Container for Briefcase and Items */}
