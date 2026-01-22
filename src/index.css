@@ -296,17 +296,6 @@
   }
 }
 
-@keyframes blink {
-  0%, 90%, 100% {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  95% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(-3deg);
@@ -330,10 +319,6 @@
 
 .animate-wiggle {
   animation: wiggle 2s ease-in-out infinite;
-}
-
-.animate-blink {
-  animation: blink 4s ease-in-out infinite;
 }
 
 .animate-slide-in-up {
