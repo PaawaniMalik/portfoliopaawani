@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Sparkles, Code, Palette, Camera, X } from "lucide-react";
 import Starburst from "./Starburst";
-import Bow from "./Bow";
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -42,10 +41,6 @@ const ProjectSection = () => {
       {/* Floating starbursts */}
       <Starburst className="top-[20%] left-[8%] floating" size="md" />
       <Starburst className="top-[50%] right-[10%] floating-delayed" size="sm" />
-      
-      {/* Floating bows */}
-      <Bow className="top-[15%] right-[15%] floating-delayed" size="md" variant="pink" />
-      <Bow className="bottom-[25%] left-[10%] floating-delayed-2" size="sm" variant="purple" />
       
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">PROJECTS</h2>
