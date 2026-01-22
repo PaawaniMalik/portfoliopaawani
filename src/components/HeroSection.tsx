@@ -1,7 +1,6 @@
 import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
 import Starburst from "./Starburst";
-import Bow from "./Bow";
 import paawaniAvatar from "@/assets/paawani-avatar.png";
 import paawaniAvatar2 from "@/assets/paawani-avatar-2.png";
 import paawaniAvatar3 from "@/assets/paawani-avatar-3.png";
@@ -31,10 +30,6 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
       <Starburst className="top-1/2 right-[8%] floating-delayed" size="md" />
       <Starburst className="bottom-1/4 left-[20%] floating-delayed-2" size="sm" />
       <Starburst className="top-1/4 right-[25%] floating" size="sm" />
-      
-      {/* Floating Bows */}
-      <Bow className="top-[20%] left-[15%] floating-delayed" size="md" variant="pink" />
-      <Bow className="bottom-[30%] right-[12%] floating-delayed-2" size="sm" variant="purple" />
 
       {/* Navigation */}
       <div className="flex justify-center pt-8 px-4 relative z-20">

@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import WorkSection from "@/components/WorkSection";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import ProjectSection from "@/components/ProjectSection";
+import MoreWorkSection from "@/components/MoreWorkSection";
 import AboutSection from "@/components/AboutSection";
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
   
   const workRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
+  const moreWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
@@ -38,6 +40,10 @@ const Index = () => {
       
       <div ref={projectRef}>
         <ProjectSection />
+      </div>
+      
+      <div ref={moreWorkRef}>
+        <MoreWorkSection />
       </div>
       
       <div ref={aboutRef}>
