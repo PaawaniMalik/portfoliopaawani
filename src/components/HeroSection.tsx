@@ -25,13 +25,13 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
 
   return (
     <section className="min-h-screen grid-bg relative overflow-hidden">
-      {/* Moving Starbursts */}
-      <Starburst className="top-[15%] floating-across" size="lg" />
-      <Starburst className="top-[35%] floating-across-delayed" size="md" />
-      <Starburst className="top-[55%] floating-across-delayed-2" size="sm" />
-      <Starburst className="top-[75%] floating-across" size="md" />
-      <Starburst className="top-[25%] floating-across-delayed" size="sm" />
-      <Starburst className="top-[65%] floating-across-delayed-2" size="lg" />
+      {/* Floating Starbursts */}
+      <Starburst className="top-1/3 left-[10%] floating" size="lg" />
+      <Starburst className="top-1/2 right-[8%] floating-delayed" size="md" />
+      <Starburst className="bottom-1/4 left-[20%] floating-delayed-2" size="sm" />
+      <Starburst className="top-1/4 right-[25%] floating" size="sm" />
+      <Starburst className="top-[15%] left-[30%] floating-delayed" size="sm" />
+      <Starburst className="top-[60%] right-[15%] floating-delayed-2" size="md" />
 
       {/* Navigation */}
       <div className="flex justify-center pt-8 px-4 relative z-20">
