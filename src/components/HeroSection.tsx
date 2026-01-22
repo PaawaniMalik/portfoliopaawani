@@ -2,6 +2,7 @@ import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
 import Starburst from "./Starburst";
 import Bow from "./Bow";
+import BlinkingAvatar from "./BlinkingAvatar";
 import paawaniAvatar from "@/assets/paawani-avatar.png";
 import paawaniAvatar2 from "@/assets/paawani-avatar-2.png";
 import paawaniAvatar3 from "@/assets/paawani-avatar-3.png";
@@ -16,12 +17,12 @@ interface HeroSectionProps {
 
 const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
   const avatars = [
-    { src: paawaniAvatar, alt: "Paawani main", delay: "" },
-    { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed" },
-    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2" },
-    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating" },
-    { src: paawaniAvatar5, alt: "Paawani with dog", delay: "floating-delayed" },
-    { src: paawaniAvatar6, alt: "Paawani smiling", delay: "floating-delayed-2" },
+    { src: paawaniAvatar, alt: "Paawani main", delay: "", blinkDelay: "0s" },
+    { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed", blinkDelay: "0.5s" },
+    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2", blinkDelay: "1s" },
+    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating", blinkDelay: "1.5s" },
+    { src: paawaniAvatar5, alt: "Paawani with dog", delay: "floating-delayed", blinkDelay: "2s" },
+    { src: paawaniAvatar6, alt: "Paawani smiling", delay: "floating-delayed-2", blinkDelay: "2.5s" },
   ];
 
   return (
@@ -51,12 +52,17 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
         {/* Avatar Illustrations */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-14">
           {avatars.map((avatar, index) => (
-            <img 
+            <div 
               key={index}
-              src={avatar.src} 
-              alt={avatar.alt} 
-              className={`w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 object-contain ${avatar.delay || 'floating'}`}
-            />
+              className={`w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 ${avatar.delay || 'floating'}`}
+              style={{ '--blink-delay': avatar.blinkDelay } as React.CSSProperties}
+            >
+              <BlinkingAvatar 
+                src={avatar.src} 
+                alt={avatar.alt}
+                className="w-full h-full"
+              />
+            </div>
           ))}
         </div>
       </div>
