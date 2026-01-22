@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import HeroSection from "@/components/HeroSection";
 import WorkSection from "@/components/WorkSection";
+import MarqueeStrip from "@/components/MarqueeStrip";
 import ProjectSection from "@/components/ProjectSection";
 import AboutSection from "@/components/AboutSection";
 
@@ -32,6 +33,8 @@ const Index = () => {
       <div ref={workRef}>
         <WorkSection />
       </div>
+      
+      <MarqueeStrip />
       
       <div ref={projectRef}>
         <ProjectSection />
