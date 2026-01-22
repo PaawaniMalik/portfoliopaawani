@@ -14,15 +14,15 @@ const WorkSection = () => {
   const dragStart = useRef<{ x: number; y: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Floating tool icons - well-spaced positions
+  // Floating tool icons - well-spaced circular positions around briefcase
   const floatingItems = [
     { 
       id: 0,
       type: "text",
       label: "SERVICE NOW", 
-      openPosition: { x: -320, y: -180 },
-      style: "pixel-text text-primary text-2xl md:text-4xl font-black tracking-wide",
-      rotate: -10
+      openPosition: { x: 0, y: -220 },
+      style: "pixel-text text-primary text-xl md:text-3xl font-black tracking-wide",
+      rotate: 0
     },
     { 
       id: 1,
@@ -39,8 +39,8 @@ const WorkSection = () => {
           <path fill="#FF7262" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/>
         </svg>
       ),
-      openPosition: { x: -180, y: -140 },
-      rotate: -12
+      openPosition: { x: -200, y: -160 },
+      rotate: -8
     },
     { 
       id: 2,
@@ -49,8 +49,8 @@ const WorkSection = () => {
       bg: "bg-[#470137]", 
       text: "text-[#FF61F6]",
       icon: "Xd",
-      openPosition: { x: -60, y: -160 },
-      rotate: -5
+      openPosition: { x: 200, y: -160 },
+      rotate: 8
     },
     { 
       id: 3,
@@ -59,8 +59,8 @@ const WorkSection = () => {
       bg: "bg-[#001E36]", 
       text: "text-[#31A8FF]",
       icon: "Ps",
-      openPosition: { x: 60, y: -160 },
-      rotate: 5
+      openPosition: { x: -280, y: -40 },
+      rotate: -5
     },
     { 
       id: 4,
@@ -69,8 +69,8 @@ const WorkSection = () => {
       bg: "bg-[#330000]", 
       text: "text-[#FF9A00]",
       icon: "Ai",
-      openPosition: { x: 180, y: -140 },
-      rotate: 10
+      openPosition: { x: 280, y: -40 },
+      rotate: 5
     },
     { 
       id: 5,
@@ -81,16 +81,16 @@ const WorkSection = () => {
       icon: (
         <span className="text-2xl md:text-3xl font-black">W</span>
       ),
-      openPosition: { x: 300, y: -100 },
-      rotate: 15
+      openPosition: { x: -280, y: 80 },
+      rotate: -10
     },
     { 
       id: 6,
       type: "text",
       label: "PROTOTYPE", 
-      openPosition: { x: -300, y: 80 },
-      style: "font-bold text-base md:text-xl px-4 py-2 bg-white border-3 border-black rounded shadow-lg",
-      rotate: -8
+      openPosition: { x: 280, y: 80 },
+      style: "font-bold text-base md:text-lg px-4 py-2 bg-white border-2 border-black rounded shadow-lg",
+      rotate: 5
     },
     { 
       id: 7,
@@ -102,33 +102,26 @@ const WorkSection = () => {
         <div className="text-center">
           <div className="text-amber-500 text-xl">☕</div>
           <div className="text-amber-600 font-bold text-sm md:text-base">Cf</div>
-          <div className="text-[8px] md:text-xs text-amber-700">Coffee</div>
         </div>
       ),
-      openPosition: { x: 200, y: -40 },
-      rotate: 8
+      openPosition: { x: -200, y: 180 },
+      rotate: -5
     },
     { 
       id: 8,
-      type: "character",
-      openPosition: { x: 340, y: 20 },
-      rotate: 0
+      type: "text",
+      label: "BRAINSTORM", 
+      openPosition: { x: 200, y: 180 },
+      style: "font-bold text-base md:text-lg px-4 py-2 bg-white border-2 border-black rounded shadow-lg",
+      rotate: 5
     },
     { 
       id: 9,
       type: "text",
-      label: "FIGMA IS PRACTICALLY MY BESTFRIEND.", 
-      openPosition: { x: 320, y: 120 },
-      style: "font-bold text-sm md:text-base max-w-[160px] text-left leading-tight",
+      label: "FIGMA IS MY BESTFRIEND", 
+      openPosition: { x: 0, y: 240 },
+      style: "font-bold text-sm md:text-base px-3 py-2 bg-pink-100 rounded shadow",
       rotate: 0
-    },
-    { 
-      id: 10,
-      type: "text",
-      label: "BRAINSTORM", 
-      openPosition: { x: 280, y: 200 },
-      style: "font-bold text-base md:text-xl px-4 py-2 bg-white border-3 border-black rounded shadow-lg",
-      rotate: 5
     },
   ];
 
@@ -198,20 +191,20 @@ const WorkSection = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Moving Starbursts */}
-      <Starburst className="top-[10%] floating-across" size="md" />
-      <Starburst className="top-[30%] floating-across-delayed" size="sm" />
-      <Starburst className="top-[60%] floating-across-delayed-2" size="sm" />
-      <Starburst className="top-[80%] floating-across" size="md" />
-      <Starburst className="top-[45%] floating-across-delayed" size="lg" />
+      {/* Floating Starbursts */}
+      <Starburst className="top-[10%] left-[8%] floating" size="md" />
+      <Starburst className="top-[20%] right-[10%] floating-delayed" size="sm" />
+      <Starburst className="bottom-[15%] left-[15%] floating-delayed-2" size="sm" />
+      <Starburst className="bottom-[25%] right-[8%] floating" size="md" />
+      <Starburst className="top-[50%] left-[5%] floating-delayed" size="sm" />
       
       {/* Title */}
       <div className="flex flex-col items-center mb-8 relative z-10">
         <h2 className="pixel-text text-4xl md:text-6xl text-primary">SKILLS</h2>
       </div>
 
-      {/* Left Sticky Notes */}
-      <div className="absolute left-4 md:left-12 top-1/4 z-20 flex flex-col gap-8">
+      {/* Left Sticky Note - Tools */}
+      <div className="absolute left-4 md:left-12 top-1/3 z-20">
         <div className="w-44 h-52 md:w-56 md:h-64 bg-pink-300 shadow-xl rotate-[-5deg] p-5 flex flex-col border-b-4 border-pink-400 animate-wiggle">
           <span className="text-pink-800 font-bold text-base md:text-lg mb-3">🛠️ Tools</span>
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">
@@ -223,7 +216,11 @@ const WorkSection = () => {
             <li>• Miro</li>
           </ul>
         </div>
-        <div className="w-44 h-56 md:w-56 md:h-72 bg-pink-200 shadow-xl rotate-[3deg] p-5 flex flex-col border-b-4 border-pink-300 animate-wiggle" style={{ animationDelay: '0.5s' }}>
+      </div>
+
+      {/* Right Sticky Note - Soft Skills */}
+      <div className="absolute right-4 md:right-12 top-1/3 z-20">
+        <div className="w-44 h-56 md:w-56 md:h-72 bg-pink-200 shadow-xl rotate-[5deg] p-5 flex flex-col border-b-4 border-pink-300 animate-wiggle" style={{ animationDelay: '0.5s' }}>
           <span className="text-pink-800 font-bold text-base md:text-lg mb-3">💬 Soft Skills</span>
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">
             <li>• Clear communicator</li>
@@ -266,9 +263,9 @@ const WorkSection = () => {
                 onTouchStart={(e) => handleTouchStart(e, item.id)}
               >
                 {item.type === "icon" && (
-                  <div className={`w-16 h-16 md:w-20 md:h-20 ${item.bg} rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow`}>
+                  <div className={`w-14 h-14 md:w-16 md:h-16 ${item.bg} rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow`}>
                     {typeof item.icon === 'string' ? (
-                      <span className={`${item.text} font-bold text-3xl md:text-4xl`}>{item.icon}</span>
+                      <span className={`${item.text} font-bold text-2xl md:text-3xl`}>{item.icon}</span>
                     ) : (
                       <span className={item.text}>{item.icon}</span>
                     )}
@@ -276,22 +273,6 @@ const WorkSection = () => {
                 )}
                 {item.type === "text" && (
                   <span className={item.style}>{item.label}</span>
-                )}
-                {item.type === "character" && (
-                  <div className="flex flex-col items-center">
-                    <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-b from-orange-400 to-red-500 rounded-lg flex items-center justify-center border-2 border-orange-600 shadow-lg">
-                      <span className="text-3xl md:text-4xl">🎯</span>
-                    </div>
-                    <div className="flex gap-1 mt-1">
-                      <div className="w-2 h-6 bg-green-400 rounded-full"></div>
-                      <div className="w-2 h-6 bg-blue-400 rounded-full"></div>
-                      <div className="w-2 h-6 bg-purple-400 rounded-full"></div>
-                    </div>
-                    <div className="flex gap-4 mt-1">
-                      <div className="w-2 h-4 bg-pink-400 rounded-full"></div>
-                      <div className="w-2 h-4 bg-teal-400 rounded-full"></div>
-                    </div>
-                  </div>
                 )}
               </div>
             );

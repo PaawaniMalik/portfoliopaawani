@@ -31,11 +31,11 @@ const ProjectSection = () => {
 
   return (
     <section id="project" className="min-h-screen grid-bg py-20 px-4 md:px-8 relative overflow-hidden">
-      {/* Moving starbursts */}
-      <Starburst className="top-[20%] floating-across" size="md" />
-      <Starburst className="top-[50%] floating-across-delayed" size="sm" />
-      <Starburst className="top-[75%] floating-across-delayed-2" size="lg" />
-      <Starburst className="top-[35%] floating-across" size="sm" />
+      {/* Floating starbursts */}
+      <Starburst className="top-[20%] left-[8%] floating" size="md" />
+      <Starburst className="top-[50%] right-[10%] floating-delayed" size="sm" />
+      <Starburst className="bottom-[20%] left-[15%] floating-delayed-2" size="lg" />
+      <Starburst className="top-[35%] right-[20%] floating" size="sm" />
       
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">PROJECTS</h2>

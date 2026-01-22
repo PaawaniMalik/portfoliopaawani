@@ -20,11 +20,11 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="min-h-screen grid-bg py-20 px-4 md:px-8 relative overflow-hidden">
-      {/* Moving starbursts */}
-      <Starburst className="top-[15%] floating-across" size="sm" />
-      <Starburst className="top-[40%] floating-across-delayed" size="md" />
-      <Starburst className="top-[70%] floating-across-delayed-2" size="sm" />
-      <Starburst className="top-[55%] floating-across" size="lg" />
+      {/* Floating starbursts */}
+      <Starburst className="top-20 right-10 floating" size="sm" />
+      <Starburst className="bottom-32 left-10 floating-delayed" size="md" />
+      <Starburst className="top-1/2 right-[15%] floating-delayed-2" size="sm" />
+      <Starburst className="top-1/3 left-[5%] floating" size="md" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">ABOUT ME</h2>
