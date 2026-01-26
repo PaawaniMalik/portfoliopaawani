@@ -14,7 +14,6 @@ const Index = () => {
   const projectRef = useRef<HTMLDivElement>(null);
   const moreWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
     setActiveSection(section);
@@ -27,8 +26,6 @@ const Index = () => {
       projectRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (section === "about" && aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (section === "contact" && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -54,9 +51,7 @@ const Index = () => {
         <AboutSection />
       </div>
       
-      <div ref={contactRef}>
-        <ContactSection />
-      </div>
+      <ContactSection />
     </div>
   );
 };

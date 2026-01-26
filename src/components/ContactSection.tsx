@@ -32,7 +32,7 @@ const ContactSection = () => {
       <Starburst className="top-1/2 right-[15%] floating-delayed-2" size="sm" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="pixel-text text-4xl md:text-5xl text-center mb-4">CONTACT ME</h2>
+        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">CONTACT ME</h2>
         <p className="text-center text-muted-foreground mb-12">
           Let's create something amazing together
         </p>

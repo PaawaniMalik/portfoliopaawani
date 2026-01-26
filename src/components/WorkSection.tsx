@@ -200,7 +200,7 @@ const WorkSection = () => {
       
       {/* Title */}
       <div className="flex flex-col items-center mb-8 relative z-10">
-        <h2 className="pixel-text text-5xl md:text-7xl text-primary">SKILLS</h2>
+        <h2 className="pixel-text text-4xl md:text-6xl text-primary">SKILLS</h2>
       </div>
 
       {/* Left Sticky Note - Tools */}

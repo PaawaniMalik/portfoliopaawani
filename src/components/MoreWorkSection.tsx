@@ -9,7 +9,7 @@ const MoreWorkSection = () => {
       <Starburst className="bottom-[20%] left-[5%] floating-delayed-2" size="sm" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="pixel-text text-4xl md:text-5xl text-center mb-4">MORE WORK</h2>
+        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">MORE WORK</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Additional projects and creative explorations.
         </p>
