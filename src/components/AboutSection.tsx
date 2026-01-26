@@ -1,6 +1,7 @@
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import Starburst from "./Starburst";
 import ScrollUpBalloon from "./ScrollUpBalloon";
+import paawaniPhoto from "@/assets/paawani-photo.png";
 
 const AboutSection = () => {
   const scrollToTop = () => {
@@ -40,8 +41,12 @@ const AboutSection = () => {
           <div className="bg-background rounded-3xl p-8 md:p-12 shadow-xl border border-border flex-1">
             {/* Profile Section */}
             <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-6xl shadow-lg">
-                👩🏻‍🎨
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
+                <img 
+                  src={paawaniPhoto} 
+                  alt="Paawani" 
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold mb-2">Hey, I'm Paawani! 👋</h3>
