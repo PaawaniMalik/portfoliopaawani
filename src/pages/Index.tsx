@@ -5,6 +5,7 @@ import MarqueeStrip from "@/components/MarqueeStrip";
 import ProjectSection from "@/components/ProjectSection";
 import MoreWorkSection from "@/components/MoreWorkSection";
 import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -49,6 +50,8 @@ const Index = () => {
       <div ref={aboutRef}>
         <AboutSection />
       </div>
+      
+      <ContactSection />
     </div>
   );
 };
