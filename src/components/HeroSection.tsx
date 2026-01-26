@@ -59,7 +59,7 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
       {/* Footer Bar */}
       <div className="footer-bar absolute bottom-0 left-0 right-0 py-4 px-6 text-center">
         <p className="text-sm md:text-base font-medium tracking-wide">
-          <span className="font-semibold">Paawani</span> is a Creative Designer, Developer, and Digital Artist bringing ideas to life.
+          <span className="font-semibold">Paawani</span> is a Creative Designer and Digital Artist bringing ideas to life.
         </p>
       </div>
     </section>
