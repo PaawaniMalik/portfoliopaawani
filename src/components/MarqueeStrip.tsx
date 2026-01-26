@@ -1,6 +1,6 @@
 const MarqueeStrip = () => {
-  const text = "PORTFOLIO";
-  const repeatedText = Array(20).fill(text).join(" ★ ");
+  const text = "PORTFOLIO ★ ILLUSTRATIONS ★";
+  const repeatedText = Array(10).fill(text).join(" ");
 
   return (
     <div className="w-full bg-black py-4 overflow-hidden relative">
