@@ -1,12 +1,8 @@
 import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
 import Starburst from "./Starburst";
-import paawaniAvatar from "@/assets/paawani-avatar.png";
-import paawaniAvatar2 from "@/assets/paawani-avatar-2.png";
-import paawaniAvatar3 from "@/assets/paawani-avatar-3.png";
-import paawaniAvatar4 from "@/assets/paawani-avatar-4.png";
-import paawaniAvatar5 from "@/assets/paawani-avatar-5.png";
-import paawaniAvatar6 from "@/assets/paawani-avatar-6.png";
+import paawaniAvatar1 from "@/assets/paawani-avatar-new-1.png";
+import paawaniAvatar2 from "@/assets/paawani-avatar-new-2.png";
 
 interface HeroSectionProps {
   activeSection: string;
@@ -15,12 +11,8 @@ interface HeroSectionProps {
 
 const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
   const avatars = [
-    { src: paawaniAvatar, alt: "Paawani main", delay: "" },
+    { src: paawaniAvatar1, alt: "Paawani illustrations", delay: "" },
     { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed" },
-    { src: paawaniAvatar3, alt: "Paawani casual", delay: "floating-delayed-2" },
-    { src: paawaniAvatar4, alt: "Paawani with headphones", delay: "floating" },
-    { src: paawaniAvatar5, alt: "Paawani with dog", delay: "floating-delayed" },
-    { src: paawaniAvatar6, alt: "Paawani smiling", delay: "floating-delayed-2" },
   ];
 
   return (

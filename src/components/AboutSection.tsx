@@ -31,7 +31,7 @@ const AboutSection = () => {
       <Starburst className="top-1/3 left-[5%] floating" size="md" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">ABOUT ME</h2>
+        <h2 className="pixel-text text-4xl md:text-5xl text-center mb-4">ABOUT ME</h2>
         <p className="text-center text-muted-foreground mb-12">
           Get to know the person behind the designs
         </p>
