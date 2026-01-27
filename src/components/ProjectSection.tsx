@@ -51,7 +51,7 @@ const ProjectSection = () => {
       <Starburst className="top-[50%] right-[10%] floating-delayed" size="sm" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">
+        <h2 className="pixel-text text-3xl md:text-6xl text-center mb-4">
           PROJECTS
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">

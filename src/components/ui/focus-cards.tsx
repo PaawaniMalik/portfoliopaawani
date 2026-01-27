@@ -21,7 +21,7 @@ export const Card = React.memo(
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "rounded-lg relative bg-gray-100 dark:bg-black overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+        hovered !== null && hovered !== index && "blur-sm scale-[0.98]",
       )}
     >
       <img
@@ -32,13 +32,13 @@ export const Card = React.memo(
       <div
         className={cn(
           "absolute inset-0 bg-black/50 flex flex-col justify-end py-8 px-4 transition-opacity duration-300",
-          hovered === index ? "opacity-100" : "opacity-0"
+          hovered === index ? "opacity-100" : "opacity-0",
         )}
       >
         <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 mb-4">
           {card.title}
         </div>
-        
+
         <div className="flex gap-3">
           {card.sourceUrl && (
             <a
@@ -52,7 +52,7 @@ export const Card = React.memo(
               <span className="text-sm">Source Code</span>
             </a>
           )}
-          
+
           {card.websiteUrl && (
             <a
               href={card.websiteUrl}
@@ -68,7 +68,7 @@ export const Card = React.memo(
         </div>
       </div>
     </div>
-  )
+  ),
 );
 
 Card.displayName = "Card";
@@ -97,7 +97,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
             setHovered={setHovered}
           />
         </div>
-        
+
         {/* Second card takes 1/3 of the width */}
         {cards[1] && (
           <div className="md:col-span-1">
@@ -111,7 +111,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
           </div>
         )}
       </div>
-      
+
       {/* Second row: Third card 1x size, fourth card 2x size */}
       {cards.length > 2 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -127,7 +127,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
               />
             </div>
           )}
-          
+
           {/* Fourth card takes 2/3 of the width */}
           {cards[3] && (
             <div className="md:col-span-2">

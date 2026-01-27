@@ -1,7 +1,7 @@
 import { FocusCards } from "@/components/ui/focus-cards";
 import pawsngoImg from "@/assets/pawsngo.png";
 import casperImg from "@/assets/casper.png"
-
+import thalitales from "@/assets/thalitales.png"
 export function FocusCardsDemo() {
   const cards = [
     {
@@ -12,8 +12,7 @@ export function FocusCardsDemo() {
     },
     {
       title: "AI Chatbot – Contextual QnA Bot",
-      src: "/placeholder.svg",
-      sourceUrl: "https://github.com/Namann-14/ai-chatbot.git",
+      src: thalitales,
       websiteUrl: "https://pookie-chatbot.vercel.app/",
     },
     {

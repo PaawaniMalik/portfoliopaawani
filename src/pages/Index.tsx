@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import { FocusCardsDemo } from "@/components/focus-card";
 import { TypewriterEffectSmoothDemo } from "@/components/Typewriter Effect";
+import LegendaryBanner from "@/components/LegendaryBanner";
 
 const   Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -16,6 +17,7 @@ const   Index = () => {
   const projectRef = useRef<HTMLDivElement>(null);
   const moreWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
     setActiveSection(section);
@@ -28,6 +30,8 @@ const   Index = () => {
       projectRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (section === "about" && aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (section === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -46,15 +50,22 @@ const   Index = () => {
 
       </div>
 
-      <div ref={moreWorkRef}>
+      {/* <div ref={moreWorkRef}>
         <MoreWorkSection />
-      </div>
+      </div> */}
 
       <div ref={aboutRef}>
         <AboutSection />
       </div>
 
-      <ContactSection />
+      <LegendaryBanner />
+
+      <div ref={contactRef}>
+        <ContactSection />
+      </div>
+
+
+
     </div>
   );
 };

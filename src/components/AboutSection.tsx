@@ -3,6 +3,7 @@ import Starburst from "./Starburst";
 import ScrollUpBalloon from "./ScrollUpBalloon";
 import paawaniPhoto from "@/assets/paawani-photo.png";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const scrollToTop = () => {
@@ -45,16 +46,79 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="min-h-screen grid-bg py-20 px-4 md:px-8 relative overflow-hidden"
+      className="min-h-screen grid-bg py-32 px-4 md:px-8 relative overflow-hidden pb-48"
     >
-      {/* Floating starbursts */}
-      <Starburst className="top-20 right-10 floating" size="sm" />
-      <Starburst className="bottom-32 left-10 floating-delayed" size="md" />
-      <Starburst className="top-1/2 right-[15%] floating-delayed-2" size="sm" />
-      <Starburst className="top-1/3 left-[5%] floating" size="md" />
+      {/* Floating starbursts with framer-motion animations */}
+      <motion.div
+        className="absolute top-20 right-10"
+        animate={{
+          x: [0, 30, -20, 0],
+          y: [0, -40, 30, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Starburst size="sm" />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-32 left-10"
+        animate={{
+          x: [0, -40, 20, 0],
+          y: [0, 30, -20, 0],
+          rotate: [0, -180, -360],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
+      >
+        <Starburst size="md" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-1/2 right-[15%]"
+        animate={{
+          x: [0, 20, -30, 0],
+          y: [0, -30, 20, 0],
+          rotate: [0, 90, 180, 270, 360],
+          scale: [1, 1.2, 0.9, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      >
+        <Starburst size="sm" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-1/3 left-[5%]"
+        animate={{
+          x: [0, 40, -10, 0],
+          y: [0, 20, -30, 0],
+          rotate: [0, -90, -180, -270, -360],
+        }}
+        transition={{
+          duration: 16,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      >
+        <Starburst size="md" />
+      </motion.div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">
+        <h2 className="pixel-text text-7xl md:text-6xl text-center mb-4">
           ABOUT ME
         </h2>
         <p className="text-center text-muted-foreground mb-12">
@@ -77,11 +141,15 @@ const AboutSection = () => {
                 {/* <h3 className="text-2xl font-bold mb-2">
                   Hey, I'm Paawani! 👋
                 </h3> */}
-                <TypewriterEffectSmooth words={words}/>
+                <TypewriterEffectSmooth words={words} />
                 <p className="text-muted-foreground max-w-md">
                   A creative designer who loves creating beautiful, interactive
                   experiences. I bring creativity and technical skills together
                   to build amazing digital products.
+                  <br />
+                  <p className="text-[#ed65cc]">
+                    I love pink (as if it wasn&apos;t very obvious)
+                  </p>
                 </p>
               </div>
             </div>
@@ -102,7 +170,7 @@ const AboutSection = () => {
             </div>
 
             {/* Social Links */}
-            <div>
+            {/* <div>
               <h4 className="font-semibold mb-4 text-lg">Let's Connect</h4>
               <div className="flex gap-4">
                 {socials.map((social, index) => (
@@ -116,7 +184,7 @@ const AboutSection = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Scroll Up Balloon */}
