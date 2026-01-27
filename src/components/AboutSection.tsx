@@ -2,6 +2,7 @@ import { Mail, Linkedin, Instagram } from "lucide-react";
 import Starburst from "./Starburst";
 import ScrollUpBalloon from "./ScrollUpBalloon";
 import paawaniPhoto from "@/assets/paawani-photo.png";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 const AboutSection = () => {
   const scrollToTop = () => {
@@ -22,8 +23,30 @@ const AboutSection = () => {
     { icon: Instagram, label: "Instagram", href: "#" },
   ];
 
+  const words = [
+    {
+      text: "Hey",
+    },
+    {
+      text: "I'm",
+    },
+    // {
+    //   text: "Paawani",
+    // },
+    // {
+    //   text: "with",
+    // },
+    {
+      text: "Paawani.",
+      className: "text-[#ed65cc] dark:text-[#ed65cc]",
+    },
+  ];
+
   return (
-    <section id="about" className="min-h-screen grid-bg py-20 px-4 md:px-8 relative overflow-hidden">
+    <section
+      id="about"
+      className="min-h-screen grid-bg py-20 px-4 md:px-8 relative overflow-hidden"
+    >
       {/* Floating starbursts */}
       <Starburst className="top-20 right-10 floating" size="sm" />
       <Starburst className="bottom-32 left-10 floating-delayed" size="md" />
@@ -31,7 +54,9 @@ const AboutSection = () => {
       <Starburst className="top-1/3 left-[5%] floating" size="md" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">ABOUT ME</h2>
+        <h2 className="pixel-text text-3xl md:text-4xl text-center mb-4">
+          ABOUT ME
+        </h2>
         <p className="text-center text-muted-foreground mb-12">
           Get to know the person behind the designs
         </p>
@@ -42,18 +67,21 @@ const AboutSection = () => {
             {/* Profile Section */}
             <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
               <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
-                <img 
-                  src={paawaniPhoto} 
-                  alt="Paawani" 
+                <img
+                  src={paawaniPhoto}
+                  alt="Paawani"
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-2">Hey, I'm Paawani! 👋</h3>
+                {/* <h3 className="text-2xl font-bold mb-2">
+                  Hey, I'm Paawani! 👋
+                </h3> */}
+                <TypewriterEffectSmooth words={words}/>
                 <p className="text-muted-foreground max-w-md">
-                  A creative designer who loves creating beautiful, 
-                  interactive experiences. I bring creativity and technical skills 
-                  together to build amazing digital products.
+                  A creative designer who loves creating beautiful, interactive
+                  experiences. I bring creativity and technical skills together
+                  to build amazing digital products.
                 </p>
               </div>
             </div>
@@ -92,15 +120,15 @@ const AboutSection = () => {
           </div>
 
           {/* Scroll Up Balloon */}
-          <div className="hidden md:flex items-center justify-center pt-20">
+          {/* <div className="hidden md:flex items-center justify-center pt-20">
             <ScrollUpBalloon onClick={scrollToTop} />
-          </div>
+          </div> */}
         </div>
 
         {/* Footer */}
-        <p className="text-center text-muted-foreground mt-12 text-sm">
+        {/* <p className="text-center text-muted-foreground mt-12 text-sm">
           Made with 💖 by Paawani • {new Date().getFullYear()}
-        </p>
+        </p> */}
       </div>
     </section>
   );

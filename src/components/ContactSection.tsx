@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Play, Pause, Mail, Linkedin, Instagram } from "lucide-react";
+import { Play, Pause, Mail, Linkedin, Instagram, Camera } from "lucide-react";
 import Starburst from "./Starburst";
 import contactVideo from "@/assets/contact-video.mp4";
 
@@ -22,6 +22,7 @@ const ContactSection = () => {
     { icon: Mail, label: "Email", href: "#" },
     { icon: Linkedin, label: "LinkedIn", href: "#" },
     { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Camera, label: "Pinterest", href: "#" },
   ];
 
   return (

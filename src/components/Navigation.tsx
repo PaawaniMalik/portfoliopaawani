@@ -16,7 +16,7 @@ const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
   ];
 
   return (
-    <nav className="nav-bar flex items-center gap-2 px-4 py-2 shadow-xl">
+    <nav className="nav-bar flex items-center gap-2 px-4 py-2 shadow-xl fixed z-[1001]">
       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 mr-4">
         <span className="pixel-text text-lg text-white">P</span>
       </div>

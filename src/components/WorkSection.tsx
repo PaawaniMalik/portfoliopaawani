@@ -204,7 +204,7 @@ const WorkSection = () => {
       </div>
 
       {/* Left Sticky Note - Tools */}
-      <div className="absolute left-4 md:left-12 top-1/3 z-20">
+      <div className="absolute left-4 md:left-20 top-1/3 z-20">
         <div className="w-44 h-52 md:w-56 md:h-64 bg-pink-300 shadow-xl rotate-[-5deg] p-5 flex flex-col border-b-4 border-pink-400 animate-wiggle">
           <span className="text-pink-800 font-bold text-base md:text-lg mb-3">🛠️ Tools</span>
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">
@@ -219,7 +219,7 @@ const WorkSection = () => {
       </div>
 
       {/* Right Sticky Note - Soft Skills */}
-      <div className="absolute right-4 md:right-12 top-1/3 z-20">
+      <div className="absolute right-8 md:right-20 top-1/3 z-20">
         <div className="w-44 h-56 md:w-56 md:h-72 bg-pink-200 shadow-xl rotate-[5deg] p-5 flex flex-col border-b-4 border-pink-300 animate-wiggle" style={{ animationDelay: '0.5s' }}>
           <span className="text-pink-800 font-bold text-base md:text-lg mb-3">💬 Soft Skills</span>
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">

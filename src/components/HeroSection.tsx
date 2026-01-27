@@ -36,8 +36,8 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
         <Navigation activeSection={activeSection} onNavigate={onNavigate} />
       </div>
 
-      {/* Main Content */}
-      <div className="flex flex-col items-center justify-center px-4 pt-8 pb-16 relative z-10">
+      {/* Main Content */} 
+      <div className="flex flex-col items-center justify-center px-4 pt-20 pb-16 relative z-10">
         {/* Title */}
         <div className="mb-6 md:mb-8">
           <PixelTitle text="PAAWANI" />
