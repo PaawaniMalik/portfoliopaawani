@@ -2,6 +2,8 @@ import { Mail, Linkedin, Instagram } from "lucide-react";
 import Starburst from "./Starburst";
 import ScrollUpBalloon from "./ScrollUpBalloon";
 import paawaniPhoto from "@/assets/paawani-photo.png";
+import resumeImage from "@/assets/resume.png";
+import resumePDF from "@/assets/resume paawani.pdf";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { motion } from "framer-motion";
 
@@ -167,6 +169,27 @@ const AboutSection = () => {
                   </span>
                 ))}
               </div>
+            </div>
+
+            {/* Resume Section */}
+            <div className="flex justify-center">
+              <a
+                href={resumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-block hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src={resumeImage}
+                  alt="View Resume"
+                  className="w-full max-w-md rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 rounded-2xl transition-all duration-300 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 text-white font-bold text-lg bg-primary px-6 py-3 rounded-full shadow-lg transition-opacity duration-300">
+                    View Resume
+                  </span>
+                </div>
+              </a>
             </div>
 
             {/* Social Links */}

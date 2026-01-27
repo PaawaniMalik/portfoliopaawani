@@ -1,6 +1,8 @@
 import Navigation from "./Navigation";
 import PixelTitle from "./PixelTitle";
 import Starburst from "./Starburst";
+import { Confetti, type ConfettiRef } from "./ui/confetti";
+import { useRef } from "react";
 import paawaniAvatar from "@/assets/paawani-avatar.png";
 import paawaniAvatar2 from "@/assets/paawani-avatar-2.png";
 import paawaniAvatar3 from "@/assets/paawani-avatar-3.png";
@@ -14,6 +16,8 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
+  const confettiRef = useRef<ConfettiRef>(null);
+  
   const avatars = [
     { src: paawaniAvatar, alt: "Paawani main", delay: "" },
     { src: paawaniAvatar2, alt: "Paawani with drink", delay: "floating-delayed" },
@@ -39,8 +43,16 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
       {/* Main Content */} 
       <div className="flex flex-col items-center justify-center px-4 pt-20 pb-16 relative z-10">
         {/* Title */}
-        <div className="mb-6 md:mb-8">
+        <div 
+          className="mb-6 md:mb-8 relative"
+          onMouseEnter={() => confettiRef.current?.fire({})}
+          onClick={() => confettiRef.current?.fire({})}
+        >
           <PixelTitle text="PAAWANI" />
+          <Confetti
+            ref={confettiRef}
+            className="absolute top-0 left-0 z-50 size-full pointer-events-none"
+          />
         </div>
 
         {/* Avatar Illustrations */}

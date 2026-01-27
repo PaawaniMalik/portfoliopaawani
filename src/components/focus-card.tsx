@@ -2,6 +2,7 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import pawsngoImg from "@/assets/pawsngo.png";
 import casperImg from "@/assets/casper.png"
 import thalitales from "@/assets/thalitales.png"
+import image from "@/assets/image.png"
 export function FocusCardsDemo() {
   const cards = [
     {
@@ -11,15 +12,12 @@ export function FocusCardsDemo() {
       websiteUrl: "https://www.figma.com/proto/M4tWo5aoRlPZi4gWNo8c1J/Omni-channel-secret?page-id=0%3A1&node-id=19-100&m=draw&scaling=scale-down-width&content-scaling=fixed&t=rBmgtlzsSFnXEcaa-1",
     },
     {
-      title: "AI Chatbot – Contextual QnA Bot",
+      title: "Thalitales",
       src: thalitales,
-      websiteUrl: "https://pookie-chatbot.vercel.app/",
     },
     {
-      title: "SkillSync – Smart Hiring Tool",
-      src: "/placeholder.svg",
-      sourceUrl: "https://github.com/Namann-14/Skill-Sync.git",
-      websiteUrl: "https://skill-sync-mu.vercel.app/",
+      title: "Infographic",
+      src: image,
     },
     {
       title: "Casper - Service Design",

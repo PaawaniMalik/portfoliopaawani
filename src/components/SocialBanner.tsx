@@ -3,10 +3,10 @@ import { SparklesText } from "./ui/sparkles-text";
 
 const SocialBanner = () => {
   const socialLinks = {
-    linkedin: "https://www.linkedin.com/in/yourprofile",
-    instagram: "https://www.instagram.com/yourprofile",
-    pinterest: "https://www.pinterest.com/yourprofile",
-    behance: "https://www.behance.net/yourprofile",
+    linkedin: "www.linkedin.com/in/paawani-malik-17967b249",
+    instagram: "https://www.instagram.com/paawanii_/",
+    pinterest: "https://pin.it/2nZxgJ7Y1",
+    behance: "https://www.behance.net/paawanimalik",
   };
 
   return (
