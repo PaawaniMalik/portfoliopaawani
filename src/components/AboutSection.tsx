@@ -17,7 +17,9 @@ const AboutSection = () => {
     "Graphic Design",
     "Illustration",
     "Branding",
-    "Motion Design",
+    "Service Design",
+    "Product Design",
+    "Video Editing",
   ];
 
   const socials = [

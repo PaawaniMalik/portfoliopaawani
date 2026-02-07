@@ -210,10 +210,11 @@ const WorkSection = () => {
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">
             <li>• Figma</li>
             <li>• Framer</li>
-            <li>• FigJam</li>
             <li>• Adobe Illustrator</li>
             <li>• Photoshop</li>
             <li>• Miro</li>
+            <li>• After Effects</li>
+            <li>• Blender (Basic)</li>
           </ul>
         </div>
       </div>
