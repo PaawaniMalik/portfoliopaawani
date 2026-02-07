@@ -3,7 +3,7 @@ import Starburst from "./Starburst";
 import ScrollUpBalloon from "./ScrollUpBalloon";
 import paawaniPhoto from "@/assets/paawani-photo.png";
 import resumeImage from "@/assets/resume.png";
-import resumePDF from "@/assets/resume paawani.pdf";
+import resumePDF from "@/assets/RESUMEEEE.pdf";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { motion } from "framer-motion";
 

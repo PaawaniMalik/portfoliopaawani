@@ -224,9 +224,12 @@ const WorkSection = () => {
           <span className="text-pink-800 font-bold text-base md:text-lg mb-3">💬 Soft Skills</span>
           <ul className="text-pink-700 text-xs md:text-sm space-y-1.5">
             <li>• Clear communicator</li>
-            <li>• Time-disciplined and dependable with deadlines</li>
+            <li>• Attention to detail</li>
             <li>• Always open to feedbacks</li>
             <li>• Very Adjusting</li>
+            <li>• Team player</li>
+            <li>• Problem solver</li>
+            <li>• Creative thinker</li>
           </ul>
         </div>
       </div>

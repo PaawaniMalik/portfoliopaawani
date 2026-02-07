@@ -1,5 +1,5 @@
 const MarqueeStrip = () => {
-  const text = "PORTFOLIO ★ ILLUSTRATIONS ★";
+  const text = "PORTFOLIO ★";
   const repeatedText = Array(10).fill(text).join(" ");
 
   return (

@@ -2,10 +2,12 @@ import { useState, useRef } from "react";
 import { Play, Pause } from "lucide-react";
 import Starburst from "./Starburst";
 import contactVideo from "@/assets/contact-video.mp4";
+import phoneImage from "@/assets/phone.png";
 import SocialBanner from "./SocialBanner";
 
 const ContactSection = () => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [showNumber, setShowNumber] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const togglePlayPause = () => {
@@ -71,7 +73,40 @@ const ContactSection = () => {
           {/* Social Banner */}
           <SocialBanner />
         </div>
+
+        {/* Click Me Phone Animation - Bottom Right */}
       </div>
+        <div className="absolute bottom-0 right-8 flex flex-col items-center">
+          <p className="pixel-text text-2xl text-pink-500 font-bold animate-bounce">CLICK ME</p>
+          <img
+            src={phoneImage}
+            alt="Click me phone"
+            className="w-48 h-auto transform hover:scale-110 transition-transform duration-300 cursor-pointer"
+            onClick={() => setShowNumber(true)}
+          />
+        </div>
+
+        {/* Phone Number Popup */}
+        {showNumber && (
+          <div 
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-in fade-in duration-200"
+            onClick={() => setShowNumber(false)}
+          >
+            <div 
+              className="bg-pink-500 rounded-2xl p-8 shadow-2xl border-4 border-pink-600 animate-in zoom-in duration-300"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h3 className="pixel-text text-3xl text-white mb-4 text-center">CALL ME!</h3>
+              <p className="text-5xl font-bold text-white text-center tracking-wider">7011970515</p>
+              <button
+                onClick={() => setShowNumber(false)}
+                className="mt-6 w-full bg-white text-pink-500 pixel-text text-xl py-2 px-6 rounded-lg hover:bg-pink-100 transition-colors"
+              >
+                CLOSE
+              </button>
+            </div>
+          </div>
+        )}
     </section>
   );
 };

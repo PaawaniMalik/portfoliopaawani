@@ -3,14 +3,14 @@ import { SparklesText } from "./ui/sparkles-text";
 
 const SocialBanner = () => {
   const socialLinks = {
-    linkedin: "www.linkedin.com/in/paawani-malik-17967b249",
+    linkedin: "https://www.linkedin.com/in/paawani-malik-17967b249/",
     instagram: "https://www.instagram.com/paawanii_/",
     pinterest: "https://pin.it/2nZxgJ7Y1",
-    behance: "https://www.behance.net/paawanimalik",
+    behance: "https://www.behance.net/paawanimalikk",
   };
 
   return (
-    <section className="relative w-full py-12 md:py-20 overflow-hidden grid-bg">
+    <section className="relative w-full py-12 md:py-20 overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center space-y-4 md:space-y-6">
           {/* First Line: I'M MOST ACTIVE ON LinkedIn */}

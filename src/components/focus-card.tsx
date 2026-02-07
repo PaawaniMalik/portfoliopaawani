@@ -1,28 +1,29 @@
 import { FocusCards } from "@/components/ui/focus-cards";
-import pawsngoImg from "@/assets/pawsngo.png";
+import pawsngoImg from "@/assets/pawsngo.webp";
 import casperImg from "@/assets/casper.png"
-import thalitales from "@/assets/thalitales.png"
-import image from "@/assets/image.png"
+import thalitales from "@/assets/thalitales.webp"
+import image from "@/assets/ok12.jpg"
 export function FocusCardsDemo() {
   const cards = [
     {
       title: "Paws N Go - Pet Travel",
       src: pawsngoImg,
-      // sourceUrl: "https://github.com/Namann-14/quizify.git",
-      websiteUrl: "https://www.figma.com/proto/M4tWo5aoRlPZi4gWNo8c1J/Omni-channel-secret?page-id=0%3A1&node-id=19-100&m=draw&scaling=scale-down-width&content-scaling=fixed&t=rBmgtlzsSFnXEcaa-1",
+      websiteUrl: "https://www.behance.net/gallery/243617547/Omnichannel-Project-PAWSNGO",
     },
     {
       title: "Thalitales",
       src: thalitales,
+      websiteUrl: "https://www.behance.net/gallery/243573975/Thalitales-Branding",
     },
     {
-      title: "Infographic",
+      title: "Data Visualization",
       src: image,
+      websiteUrl: "https://www.behance.net/gallery/243713721/Data-Vizualisation-Project",
     },
     {
       title: "Casper - Service Design",
       src: casperImg,
-      websiteUrl: "https://www.figma.com/proto/hKI1YFtFVREQRG6j7W5TXp/Casper--service-design-?page-id=618%3A5831&node-id=618-5832&starting-point-node-id=618%3A5832&t=vWaA3XCpcEnH3Y9h-1",
+      websiteUrl: "https://www.behance.net/gallery/243609167/Service-Design-Project-CASPER",
     },
   ];
 

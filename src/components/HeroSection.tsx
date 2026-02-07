@@ -48,7 +48,7 @@ const HeroSection = ({ activeSection, onNavigate }: HeroSectionProps) => {
           onMouseEnter={() => confettiRef.current?.fire({})}
           onClick={() => confettiRef.current?.fire({})}
         >
-          <PixelTitle text="PAAWANI" />
+          <PixelTitle text="PAAWANI MALIK" />
           <Confetti
             ref={confettiRef}
             className="absolute top-0 left-0 z-50 size-full pointer-events-none"
