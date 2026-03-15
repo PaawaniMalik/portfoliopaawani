@@ -13,6 +13,7 @@ const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
     { id: "project", label: "Project" },
     { id: "about", label: "About me" },
     { id: "contact", label: "Contact me" },
+    { id: "archive", label: "Archive" },
   ];
 
   return (
@@ -21,18 +22,30 @@ const Navigation = ({ activeSection, onNavigate }: NavigationProps) => {
         <span className="pixel-text text-lg text-white">P</span>
       </div>
       
-      {navItems.map((item) => (
-        <button
-          key={item.id}
-          onClick={() => onNavigate(item.id)}
-          className={cn(
-            "nav-link",
-            activeSection === item.id && "active text-primary"
-          )}
-        >
-          {item.label}
-        </button>
-      ))}
+      {navItems.map((item) =>
+        item.id === "archive" ? (
+          <a
+            key={item.id}
+            href="https://paawanimalik.framer.website/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+          >
+            {item.label}
+          </a>
+        ) : (
+          <button
+            key={item.id}
+            onClick={() => onNavigate(item.id)}
+            className={cn(
+              "nav-link",
+              activeSection === item.id && "active text-primary"
+            )}
+          >
+            {item.label}
+          </button>
+        )
+      )}
     </nav>
   );
 };
