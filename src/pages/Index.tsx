@@ -9,6 +9,8 @@ import ContactSection from "@/components/ContactSection";
 import { FocusCardsDemo } from "@/components/focus-card";
 import { TypewriterEffectSmoothDemo } from "@/components/Typewriter Effect";
 import LegendaryBanner from "@/components/LegendaryBanner";
+import FaqSection from "@/components/FaqSection";
+import MarqueePathSection from "@/components/MarqueePathSection";
 
 const   Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -17,6 +19,7 @@ const   Index = () => {
   const projectRef = useRef<HTMLDivElement>(null);
   const moreWorkRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
@@ -30,6 +33,8 @@ const   Index = () => {
       projectRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (section === "about" && aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (section === "contact" && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -38,6 +43,10 @@ const   Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection activeSection={activeSection} onNavigate={handleNavigate} />
+
+      <div ref={aboutRef}>
+        <AboutSection />
+      </div>
 
       <div ref={workRef}>
         <WorkSection />
@@ -54,11 +63,13 @@ const   Index = () => {
         <MoreWorkSection />
       </div> */}
 
-      <div ref={aboutRef}>
-        <AboutSection />
+      <LegendaryBanner />
+
+      <div ref={faqRef}>
+        <FaqSection />
       </div>
 
-      <LegendaryBanner />
+      <MarqueePathSection />
 
       <div ref={contactRef}>
         <ContactSection />

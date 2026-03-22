@@ -184,7 +184,7 @@ const WorkSection = () => {
   return (
     <section 
       id="work" 
-      className="min-h-screen grid-bg py-20 px-4 md:px-8 overflow-hidden relative"
+      className="min-h-screen grid-bg py-20 px-4 md:px-8 overflow-hidden relative bg-[#ffe7f7]"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
