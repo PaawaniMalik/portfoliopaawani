@@ -2,6 +2,10 @@ import { Sparkles, Code, Palette, Camera } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Starburst from "./Starburst";
 import StackingCards, { StackingCardItem } from "./ui/stacking-cards";
+import thaliTalesImage from "../assets/project/thalitales.png";
+import pawsNGoImage from "../assets/project/pawsngo.png";
+import casperImage from "../assets/project/casper.png";
+import dataVisualisationImage from "../assets/project/datavisualisation.png";
 
 const ProjectSection = () => {
   const projects: {
@@ -9,39 +13,49 @@ const ProjectSection = () => {
     title: string;
     description: string;
     fullDescription: string;
+    image: string;
+    link: string;
     tags: string[];
   }[] = [
     {
       icon: Palette,
-      title: "Creative Portfolio",
-      description: "Showcasing design work with interactive galleries",
+      title: "ThaliTales",
+      description: "Affordable, home-style meals for everyday comfort",
       fullDescription:
-        "A comprehensive portfolio showcasing my design journey, featuring interactive galleries, case studies, and creative explorations across various mediums and styles.",
-      tags: ["Design", "Figma", "Adobe"],
-    },
-    {
-      icon: Code,
-      title: "Web Applications",
-      description: "Building modern, responsive web experiences",
-      fullDescription:
-        "Modern web applications built with cutting-edge technologies, focusing on performance, accessibility, and delightful user experiences across all devices.",
-      tags: ["React", "TypeScript", "Tailwind"],
-    },
-    {
-      icon: Camera,
-      title: "Visual Content",
-      description: "Photography and video production",
-      fullDescription:
-        "Creative visual content including photography, video production, and motion graphics that tell compelling stories and capture memorable moments.",
-      tags: ["Photography", "Editing", "Motion"],
+        "ThaliTales is my take on making everyday meals feel simple, comforting, and reliable. It’s a service designed to bring affordable, home-style food into people’s daily lives.",
+      image: thaliTalesImage,
+      link: "https://www.behance.net/gallery/245720909/Thaliatles",
+      tags: ["Food Service", "UX", "Service Design"],
     },
     {
       icon: Sparkles,
-      title: "Brand Design",
-      description: "Creating memorable brand identities",
+      title: "PawsNGo",
+      description: "A seamless omnichannel pet care experience",
       fullDescription:
-        "End-to-end brand identity design including logo creation, visual systems, brand guidelines, and strategic positioning for memorable market presence.",
-      tags: ["Branding", "Logo", "Identity"],
+        "PawsNGo is my take on creating a seamless omnichannel experience for pet care. It connects online and offline touchpoints to make pet services more convenient, accessible, and stress-free.",
+      image: pawsNGoImage,
+      link: "https://www.behance.net/gallery/243617547/Omnichannel-Project-PAWSNGO",
+      tags: ["Omnichannel", "Pet Care", "Experience Design"],
+    },
+    {
+      icon: Code,
+      title: "Casper",
+      description: "Simplifying tooling inventory for industries",
+      fullDescription:
+        "Casper is a service design project focused on simplifying tooling inventory management in real-world industries. It streamlines tracking, availability, and usage to make operations more efficient and hassle-free.",
+      image: casperImage,
+      link: "https://www.behance.net/gallery/243609167/Service-Design-Project-CASPER",
+      tags: ["Operations", "Inventory", "Service Design"],
+    },
+    {
+      icon: Camera,
+      title: "Data Visualization",
+      description: "Turning complex information into clear infographics",
+      fullDescription:
+        "This data visualization project is my exploration of turning complex information into clear, engaging infographics. It focuses on making data easy to understand through thoughtful visuals and storytelling.",
+      image: dataVisualisationImage,
+      link: "https://www.behance.net/gallery/243713721/Data-Vizualisation-Project",
+      tags: ["Data Storytelling", "Infographics", "Visual Design"],
     },
   ];
 
@@ -96,17 +110,37 @@ const ProjectSection = () => {
                     <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
                       {project.fullDescription}
                     </p>
+
+                    <div className="mt-6 overflow-hidden rounded-2xl border border-[#efb8d8] bg-white">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} project preview`}
+                        className="h-56 w-full object-fill md:h-72"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
 
-                  <div className="mt-6 flex flex-wrap gap-2 md:mt-8">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-[#efb8d8] bg-white px-3 py-1.5 text-xs font-semibold tracking-wide text-[#8a3a69]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="mt-6 flex items-center justify-between gap-4 md:mt-8">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-[#efb8d8] bg-white px-3 py-1.5 text-xs font-semibold tracking-wide text-[#8a3a69]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 rounded-full bg-[#a43877] px-4 py-2 text-xs font-semibold tracking-wide text-white transition hover:bg-[#8a2e63]"
+                    >
+                      View on Behance
+                    </a>
                   </div>
                 </article>
               </StackingCardItem>
